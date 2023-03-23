@@ -1,34 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import previousButton from './assets/icon-prev.svg'
+import nextButton from './assets/icon-next.svg'
+import gabriela from './assets/gabriela.jpg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+
+    <div className="content-wrapper">
+      <div className="text-wrapper">
+        <p className="review-text">“Estive interessada em código por um tempo mas não tomava uma atitude, até agora. Não
+          consigo recomendar esse curso o suficiente. Estou no trabalho dos meu sonhos e vejo um futuro
+          brilhante!”</p>
+        <div className="author__content-wrapper">
+          <div className="author__name">Gabriela da Silva</div>
+          <div className="author__title">Desenvolvedora Fullstack</div>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+
+      <div className="carousel">
+        <div className="carousel__img-wrapper">
+          <img src={gabriela} alt="bootcamp graduate" className="carousel__img" />
+        </div>
+        <div className="carousel__btn-wrapper">
+          <button id="btn-prev" className="btn btn--previous"><img src={previousButton}
+            alt="previous button" /></button>
+          <button id="btn-next" className="btn btn--next"><img src={nextButton}
+            alt="next button" /></button>
+        </div>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </div>
+
   )
 }
 
